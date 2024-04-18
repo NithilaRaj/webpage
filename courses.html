@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* nav bar styles */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    li a:hover:not(.active) {
+      color: yellow;
+    }
+
+    .active {
+      color: yellow;
+    }
+
+    .logo {
+      width: 90px;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .logo-container {
+      float: left;
+    }
+
+    ul.nav-items {
+      float: right;
+    }
+
+    /* Course list styles */
+    .course-list {
+      margin-top: 20px;
+    }
+
+    .course-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .course-item img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    .course-info {
+      flex: 1;
+    }
+
+    .course-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .course-summary {
+      margin-bottom: 10px;
+    }
+
+    .course-details {
+      display: flex;
+      align-items: center;
+    }
+
+    .course-icon {
+      margin-right: 5px;
+    }
+
+    .label {
+      padding: 3px 10px;
+      border-radius: 5px;
+      color: white;
+      margin-left: 5px;
+    }
+
+    .free-label {
+      background-color: green;
+    }
+
+    .paid-label {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li class="logo-container"><img src="TIMMINS-LOGO.png" alt="Logo" class="logo"></li>
+      <ul class="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="#courses">Courses</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <div class="course-list">
+    <a href="course1.html" class="course-item">
+      <img src="courses.jpg" alt="Course 1">
+      <div class="course-info">
+        <div class="course-title">Analyzing Data with Microsoft Power BI</div>
+        <div class="course-summary">This is a summary of Course 1.</div>
+        <div class="course-details">
+          <span class="course-icon">&#128218;</span> 10 Lectures
+          <span>&nbsp;</span>
+          <span class="course-icon">&#128101;</span> 100 Students
+          <span>&nbsp;</span>
+          <span class="label free-label">Free</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="course2.html" class="course-item">
+      <img src="courses.jpg" alt="Course 2">
+      <div class="course-info">
+        <div class="course-title">Python Object-Oriented Programming (OOP) and Advanced Techniques</div>
+        <div class="course-summary">This is a summary of Course 2.</div>
+        <div class="course-details">
+          <span class="course-icon">&#128218;</span> 12 Lectures
+          <span>&nbsp;</span>
+          <span class="course-icon">&#128101;</span> 150 Students
+          <span>&nbsp;</span>
+          <span class="label free-label">Free</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="course3.html" class="course-item">
+      <img src="courses.jpg" alt="Course 3">
+      <div class="course-info">
+        <div class="course-title">Machine Learning Fundamentals: Practical Application with Python</div>
+        <div class="course-summary">This is a summary of Course 3.</div>
+        <div class="course-details">
+          <span class="course-icon">&#128218;</span> 8 Lectures
+          <span>&nbsp;</span>
+          <span class="course-icon">&#128101;</span> 120 Students
+          <span>&nbsp;</span>
+          <span class="label free-label">Free</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="course4.html" class="course-item">
+      <img src="courses.jpg" alt="Course 4">
+      <div class="course-info">
+        <div class="course-title">Java Programming for Android Application Development</div>
+        <div class="course-summary">This is a summary of Course 4.</div>
+        <div class="course-details">
+          <span class="course-icon">&#128218;</span> 15 Lectures
+          <span>&nbsp;</span>
+          <span class="course-icon">&#128101;</span> 200 Students
+          <span>&nbsp;</span>
+          <span class="label paid-label">Paid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="course5.html" class="course-item">
+      <img src="courses.jpg" alt="Course 5">
+      <div class="course-info">
+        <div class="course-title">Android Application Development</div>
+        <div class="course-summary">This is a summary of Course 5.</div>
+        <div class="course-details">
+          <span class="course-icon">&#128218;</span> 20 Lectures
+          <span>&nbsp;</span>
+          <span class="course-icon">&#128101;</span> 250 Students
+          <span>&nbsp;</span>
+          <span class="label paid-label">Paid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="course6.html" class="course-item">
+      <img src="courses.jpg" alt="Course 6">
+      <div class="course-info">
+        <div class="course-title">Angular</div>
+        <div class="course-summary">This is a summary of Course 6.</div>
+        <div class="course-details">
+          <span class="course-icon">&#128218;</span> 18 Lectures
+          <span>&nbsp;</span>
+          <span class="course-icon">&#128101;</span> 180 Students
+          <span>&nbsp;</span>
+          <span class="label paid-label">Paid</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>

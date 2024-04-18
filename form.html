@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Enrollment</title>
+  <style>
+    /* nav bar */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    li a:hover:not(.active) {
+      color: yellow;
+    }
+
+    .active {
+      color: yellow;
+    }
+
+    .logo {
+      width: 90px;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .logo-container {
+      float: left;
+    }
+
+    ul.nav-items {
+      float: right;
+    }
+
+
+    /* Styles for page layout */
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"],
+    input[type="button"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover,
+    input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+    .payment-info {
+      display: none;
+    }
+    .cvv-expires {
+      display: flex;
+    }
+    #cvv {
+      width: 80px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    #expiryDate {
+      height: 40px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li class="logo-container"><img src="TIMMINS-LOGO.png" alt="Logo" class="logo"></a></li>
+    <ul class="nav-items">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    </ul>
+  </ul>
+</nav>
+
+<div class="container">
+  <h2>Course Enrollment Form</h2>
+  <form id="enrollmentForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="course">Select a Course:</label>
+    <select id="course" name="course" required>
+      <option value="">-- Select a Course --</option>
+      <option value="course1">Analyzing Data with Microsoft Power BI (Free)</option>
+      <option value="course2">Python Object-Oriented Programming (OOP) and Advanced Techniques (Free)</option>
+      <option value="course3">Machine Learning Fundamentals: Practical Application with Python (Free)</option>
+      <option value="course4">Java Programming for Android Application Development (Paid)</option>
+      <option value="course5">Android Application Development (Paid)</option>
+      <option value="course6">Angular (Paid)</option>
+    </select>
+    
+    <div class="payment-info">
+      <label for="creditCard">Credit Card Number:</label>
+      <input type="text" id="creditCard" name="creditCard">
+      
+      <div class="cvv-expires">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" maxlength="3">
+        
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="date" id="expiryDate" name="expiryDate">
+      </div>
+      
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address">
+      
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city">
+      
+      <label for="state">State/Region:</label>
+      <input type="text" id="state" name="state">
+      
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country">
+      
+      <label for="postalCode">Postal/ZIP Code:</label>
+      <input type="text" id="postalCode" name="postalCode">
+    </div>
+    
+    <input type="submit" value="Submit">
+    <input type="button" value="Clear" onclick="clearForm()">
+  </form>
+</div>
+
+<script>
+  document.getElementById('course').addEventListener('change', function() {
+    var selectedCourse = this.value;
+    var paymentInfo = document.querySelector('.payment-info');
+    
+    if (selectedCourse === 'course4' || selectedCourse === 'course5' || selectedCourse === 'course6') {
+      paymentInfo.style.display = 'block';
+    } else {
+      paymentInfo.style.display = 'none';
+    }
+  });
+
+  function clearForm() {
+    document.getElementById('enrollmentForm').reset();
+  }
+</script>
+</body>
+</html>

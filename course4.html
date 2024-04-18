@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details</title>
+  <style>
+    /* nav bar styles */
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    nav li a:hover:not(.active) {
+      color: yellow;
+    }
+
+    .active {
+      color: yellow;
+    }
+
+    .logo {
+      width: 90px;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .logo-container {
+      float: left;
+    }
+
+    ul.nav-items {
+      float: right;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 100px; /* Adjusted margin-top to leave space for the navigation bar */
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      flex: 1;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .button-group {
+      display: flex;
+      align-items: center;
+    }
+    .button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Learning outcomes styles */
+.learning-outcomes {
+  margin-top: 20px;
+}
+
+.learning-outcomes ul {
+  list-style-type: decimal;
+}
+
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="logo-container"><img src="TIMMINS-LOGO.png" alt="Logo" class="logo"></li>
+      <ul class="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <h1>Java Programming for Android Application Development</h1>
+      <p><strong>Overview:</strong> This comprehensive course is designed to provide participants with a strong foundation in Java programming specifically tailored for Android app development. Through a series of engaging lessons and practical exercises, participants will learn the essential fundamentals of the Java language and gain expertise in object-oriented (OO) programming concepts.
+
+        Participants will embark on a learning journey that covers the basics of OO programming, enabling them to design and create robust programs using Java. They will develop essential skills in reading, writing, and debugging Java code, ensuring the ability to build efficient and error-free applications.
+        
+        In addition to mastering the Java language, participants will delve into the world of design patterns. They will gain a deep understanding of how to utilize design patterns effectively in their Java programming, equipping them with the tools to create well-structured and maintainable code.
+        
+        By the end of this course, participants will possess a strong command of Java programming, enabling them to confidently develop Android applications. Join us on this transformative learning experience and unlock the potential to build innovative and high-quality Android apps using Java.</p>
+      <div class="learning-outcomes">
+        <p><strong>Learning Outcomes:</strong></p>
+        <p>Upon completing this course, participants will be able to:</p>
+        <ul>
+          <li>Learn the fundamentals of Java language</li>
+          <li>Learn the basics of OO Programming and how to design an OO program using Java</li>
+          <li>Develop the ability to read, write and debug Java code</li>
+          <li>Develop an understanding of Design Patterns using Java</li>
+        </ul>
+        <p>By mastering these learning outcomes, participants will acquire the necessary skills to effectively utilize Java programming specifically tailored for Android app development.</p>
+      </div>
+    </div>
+    <div class="info">
+      <p><strong>Number of Lectures:</strong> 10</p>
+      <div class="button-group">
+        <a href="students.html" class="button">View Students</a>
+        <a href="form.html" class="button">Apply</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
